@@ -44,10 +44,11 @@ class DetailActivity : AppCompatActivity() {
         Picasso.with(baseContext).load(image).into(iv_food)
 
         tv_detail_advt.text = description
+
 //        tv_detail_vitamin.text = vitamins
 //        tv_detail_disease.text = diseaseHeal
 //        tv_detail_precaution.text = precautions
-        tv_price.text = getString(R.string.pricePerkg, price)
+        tv_price.text =  "$ $price"
 
         tv_cart.setOnClickListener {
             llCart.visibility = View.VISIBLE
@@ -66,7 +67,7 @@ class DetailActivity : AppCompatActivity() {
             }
 
             if (numberOfVeg >= Constants.ONE) {
-                numberOfVeg -= Constants.POINT_FIVE
+                numberOfVeg -= 1
                 val amountPrice = numberOfVeg * price.toDouble()
                 tv_price.text = getString(R.string.amount, amountPrice.toString())
                 addToBucket()
@@ -76,10 +77,10 @@ class DetailActivity : AppCompatActivity() {
         }
 
         btnIncrement.setOnClickListener {
-            numberOfVeg += Constants.POINT_FIVE
+            numberOfVeg += 1
             val amountPrice = numberOfVeg * price.toDouble()
             tvQuantity.text = numberOfVeg.toString()
-            tv_price.text = getString(R.string.amount, amountPrice.toString())
+            tv_price.text = "$ $amountPrice"
             addToBucket()
         }
     }
