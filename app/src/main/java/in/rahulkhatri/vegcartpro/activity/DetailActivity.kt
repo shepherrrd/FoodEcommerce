@@ -44,10 +44,11 @@ class DetailActivity : AppCompatActivity() {
         Picasso.with(baseContext).load(image).into(iv_food)
 
         tv_detail_advt.text = description
+
 //        tv_detail_vitamin.text = vitamins
 //        tv_detail_disease.text = diseaseHeal
 //        tv_detail_precaution.text = precautions
-        tv_price.text = getString(R.string.pricePerkg, price)
+        tv_price.text =  "$ $price"
 
         tv_cart.setOnClickListener {
             llCart.visibility = View.VISIBLE
@@ -66,7 +67,7 @@ class DetailActivity : AppCompatActivity() {
             }
 
             if (numberOfVeg >= Constants.ONE) {
-                numberOfVeg -= Constants.POINT_FIVE
+                numberOfVeg -= 1
                 val amountPrice = numberOfVeg * price.toDouble()
                 tv_price.text = getString(R.string.amount, amountPrice.toString())
                 addToBucket()
@@ -76,10 +77,10 @@ class DetailActivity : AppCompatActivity() {
         }
 
         btnIncrement.setOnClickListener {
-            numberOfVeg += Constants.POINT_FIVE
+            numberOfVeg += 1
             val amountPrice = numberOfVeg * price.toDouble()
             tvQuantity.text = numberOfVeg.toString()
-            tv_price.text = getString(R.string.amount, amountPrice.toString())
+            tv_price.text = "$ $amountPrice"
             addToBucket()
         }
     }
@@ -112,7 +113,7 @@ class DetailActivity : AppCompatActivity() {
         val btnCancel = alertOrderLayout.findViewById<Button>(R.id.btn_cancel)
 //        val etDeliveryAdd = alertOrderLayout.findViewById<EditText>(R.id.et_delivery_add)
         priceOfVeg = price.toDouble()
-        tvPrice.text = "₹ $price"
+        tvPrice.text = "$ $price"
         btnIncrement.setOnClickListener {
             numberOfVeg = numberOfVeg + 0.5
             // Increment of 500gm will done onclick + button
@@ -120,7 +121,7 @@ class DetailActivity : AppCompatActivity() {
             tvQuantity.text = numberOfVeg.toString()
             //  displayPrice(numberOfVeg*priceOfVeg);
             val price = numberOfVeg * priceOfVeg
-            tvPrice.text = "₹ $price" //  NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
+            tvPrice.text = "$ $price" //  NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
         }
         btnDecrement.setOnClickListener {
             if (numberOfVeg >= 1) {
@@ -131,7 +132,7 @@ class DetailActivity : AppCompatActivity() {
             tvQuantity.text = numberOfVeg.toString()
             // displayPrice(numberOfVeg*priceOfVeg);
             val price = numberOfVeg * priceOfVeg
-            tvPrice.text = "₹ $price"
+            tvPrice.text = "$ $price"
 //            tvPrice.text = NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
         }
         btnOk.setOnClickListener {
