@@ -2,38 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/flower"
-            android:icon="@drawable/ic_flower2"
-            android:title="Flower" />
+            android:id="@+id/televisions"
+            android:icon="@drawable/ic_tv"
+            android:title="Television" />
         <item
-            android:id="@+id/leaves"
-            android:icon="@drawable/ic_vegetable"
-            android:title="Leaves" />
+            android:id="@+id/bikes"
+            android:icon="@drawable/ic_bikes"
+            android:title="Bikes" />
         <item
-            android:id="@+id/fruit"
-            android:icon="@drawable/ic_fruit"
-            android:title="Fruits" />
+            android:id="@+id/utensils"
+            android:icon="@drawable/ic_utensils"
+            android:title="Utensils" />
         <item
-            android:id="@+id/root"
-            android:icon="@drawable/ic_carrot"
-            android:title="Root" />
+            android:id="@+id/laptops"
+            android:icon="@drawable/ic_laptop"
+            android:title="Laptops" />
         <item
-            android:id="@+id/salid"
-            android:icon="@drawable/ic_salid"
-            android:title="Salid" />
+            android:id="@+id/phones"
+            android:icon="@drawable/ic_phone"
+            android:title="Phones" />
+        <item
+            android:id="@+id/shoes"
+            android:icon="@drawable/ic_shoe"
+            android:title="Shoes" />
         <item
             android:id="@+id/mycart"
             android:icon="@drawable/cartpng"
             android:title="My Cart" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Contact Seller" />
-        </menu>
-    </item>
-
 </menu>
