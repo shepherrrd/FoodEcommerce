@@ -21,7 +21,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'in.rahulkhatri.vegcartpro'
+    namespace 'in.androidproject.ecommerce'
     lint {
         checkReleaseBuilds false
     }

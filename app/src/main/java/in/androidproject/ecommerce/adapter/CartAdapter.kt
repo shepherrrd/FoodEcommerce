@@ -1,9 +1,9 @@
-package `in`.rahulkhatri.vegcartpro.adapter
+package `in`.androidproject.ecommerce.adapter
 
-import `in`.rahulkhatri.vegcartpro.model.BucketModel
-import `in`.rahulkhatri.vegcartpro.utils.Constants.ONE
-import `in`.rahulkhatri.vegcartpro.utils.Constants.POINT_FIVE
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.model.BucketModel
+import `in`.androidproject.ecommerce.utils.Constants.ONE
+import `in`.androidproject.ecommerce.utils.Constants.POINT_FIVE
+import `in`.androidproject.ecommerce.R
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -12,10 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_cart_layout.view.*
 
-/**
- * Created by Rahul Khatri on 14-07-2020.
- * github.com/rahulkhatri19
- **/
+
 class CartAdapter(private val cartList: MutableList<BucketModel>, val context: Context) : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val cl_main = view.cl_main

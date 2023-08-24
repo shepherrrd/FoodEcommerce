@@ -1,7 +1,7 @@
-package `in`.rahulkhatri.vegcartpro.activity
+package `in`.androidproject.ecommerce.activity
 
-import `in`.rahulkhatri.vegcartpro.model.CartModel
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.model.CartModel
+import `in`.androidproject.ecommerce.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log

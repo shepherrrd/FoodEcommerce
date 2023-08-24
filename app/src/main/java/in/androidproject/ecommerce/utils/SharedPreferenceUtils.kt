@@ -1,4 +1,4 @@
-package `in`.rahulkhatri.vegcartpro.utils
+package `in`.androidproject.ecommerce.utils
 
 import android.content.Context
 import android.content.SharedPreferences

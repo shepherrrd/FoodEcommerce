@@ -1,9 +1,9 @@
-package `in`.rahulkhatri.vegcartpro.activity
+package `in`.androidproject.ecommerce.activity
 
-import `in`.rahulkhatri.vegcartpro.model.BucketModel
-import `in`.rahulkhatri.vegcartpro.utils.Constants.CART
-import `in`.rahulkhatri.vegcartpro.utils.Utility
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.model.BucketModel
+import `in`.androidproject.ecommerce.utils.Constants.CART
+import `in`.androidproject.ecommerce.utils.Utility
+import `in`.androidproject.ecommerce.R
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.util.Log

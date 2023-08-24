@@ -1,10 +1,10 @@
-package `in`.rahulkhatri.vegcartpro.activity
+package `in`.androidproject.ecommerce.activity
 
-import `in`.rahulkhatri.vegcartpro.interfaces.ItemClickListener
-import `in`.rahulkhatri.vegcartpro.model.ItemDetailModel
-import `in`.rahulkhatri.vegcartpro.utils.CustomProgressBar
-import `in`.rahulkhatri.vegcartpro.utils.SharedPreferenceUtils
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.interfaces.ItemClickListener
+import `in`.androidproject.ecommerce.model.ItemDetailModel
+import `in`.androidproject.ecommerce.utils.CustomProgressBar
+import `in`.androidproject.ecommerce.utils.SharedPreferenceUtils
+import `in`.androidproject.ecommerce.R
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

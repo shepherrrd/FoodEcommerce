@@ -1,6 +1,6 @@
-package `in`.rahulkhatri.vegcartpro.utils
+package `in`.androidproject.ecommerce.utils
 
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.R
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog

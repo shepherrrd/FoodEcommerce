@@ -1,14 +1,10 @@
-package `in`.rahulkhatri.vegcartpro.utils
+package `in`.androidproject.ecommerce.utils
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.provider.Settings
 
-/**
- * Created by Rahul Khatri on 31, January, 2021.
- * github.com/rahulkhatri19
- **/
 object Utility {
     /**
      *used to get deviceID

@@ -1,11 +1,11 @@
-package `in`.rahulkhatri.vegcartpro.activity
+package `in`.androidproject.ecommerce.activity
 
 import android.annotation.SuppressLint
-import `in`.rahulkhatri.vegcartpro.model.BucketModel
-import `in`.rahulkhatri.vegcartpro.utils.Constants
-import `in`.rahulkhatri.vegcartpro.utils.Constants.CART
-import `in`.rahulkhatri.vegcartpro.utils.Utility
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.model.BucketModel
+import `in`.androidproject.ecommerce.utils.Constants
+import `in`.androidproject.ecommerce.utils.Constants.CART
+import `in`.androidproject.ecommerce.utils.Utility
+import `in`.androidproject.ecommerce.R
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle

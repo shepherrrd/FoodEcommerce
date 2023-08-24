@@ -1,4 +1,4 @@
-package `in`.rahulkhatri.vegcartpro.interfaces
+package `in`.androidproject.ecommerce.interfaces
 
 import android.view.View
 

@@ -1,15 +1,15 @@
-package `in`.rahulkhatri.vegcartpro.adapter
+package `in`.androidproject.ecommerce.adapter
 
-import `in`.rahulkhatri.vegcartpro.R
-import `in`.rahulkhatri.vegcartpro.activity.DetailActivity
-import `in`.rahulkhatri.vegcartpro.model.ItemDetailModel
-import `in`.rahulkhatri.vegcartpro.utils.Constants.ADVANTAGE
-import `in`.rahulkhatri.vegcartpro.utils.Constants.DISEASE_HEAL
-import `in`.rahulkhatri.vegcartpro.utils.Constants.FOOD_NAME
-import `in`.rahulkhatri.vegcartpro.utils.Constants.IMAGE_URL
-import `in`.rahulkhatri.vegcartpro.utils.Constants.PRECAUTIONS
-import `in`.rahulkhatri.vegcartpro.utils.Constants.PRICE
-import `in`.rahulkhatri.vegcartpro.utils.Constants.VITAMINS
+import `in`.androidproject.ecommerce.R
+import `in`.androidproject.ecommerce.activity.DetailActivity
+import `in`.androidproject.ecommerce.model.ItemDetailModel
+import `in`.androidproject.ecommerce.utils.Constants.ADVANTAGE
+import `in`.androidproject.ecommerce.utils.Constants.DISEASE_HEAL
+import `in`.androidproject.ecommerce.utils.Constants.FOOD_NAME
+import `in`.androidproject.ecommerce.utils.Constants.IMAGE_URL
+import `in`.androidproject.ecommerce.utils.Constants.PRECAUTIONS
+import `in`.androidproject.ecommerce.utils.Constants.PRICE
+import `in`.androidproject.ecommerce.utils.Constants.VITAMINS
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -24,10 +24,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-/**
- * Created by Rahul Khatri on 26, January, 2021.
- * github.com/rahulkhatri19
- **/
+
 class CategoryItemAdapter (val itemList: List<ItemDetailModel>, val context: Context) : RecyclerView.Adapter<CategoryItemAdapter.MyViewHolder>() {
 
     class MyViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {

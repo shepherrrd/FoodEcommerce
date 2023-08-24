@@ -1,7 +1,7 @@
-package `in`.rahulkhatri.vegcartpro.adapter
+package `in`.androidproject.ecommerce.adapter
 
-import `in`.rahulkhatri.vegcartpro.R
-import `in`.rahulkhatri.vegcartpro.model.ItemModel
+import `in`.androidproject.ecommerce.R
+import `in`.androidproject.ecommerce.model.ItemModel
 import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater

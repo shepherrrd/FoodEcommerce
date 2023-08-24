@@ -1,9 +1,9 @@
-package `in`.rahulkhatri.vegcartpro.activity
+package `in`.androidproject.ecommerce.activity
 
-import `in`.rahulkhatri.vegcartpro.interfaces.ItemClickListener
-import `in`.rahulkhatri.vegcartpro.model.AllItemModel
-import `in`.rahulkhatri.vegcartpro.utils.SharedPreferenceUtils
-import `in`.rahulkhatri.vegcartpro.R
+import `in`.androidproject.ecommerce.interfaces.ItemClickListener
+import `in`.androidproject.ecommerce.model.AllItemModel
+import `in`.androidproject.ecommerce.utils.SharedPreferenceUtils
+import `in`.androidproject.ecommerce.R
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Typeface

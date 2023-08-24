@@ -1,4 +1,4 @@
-package `in`.rahulkhatri.vegcartpro.model
+package `in`.androidproject.ecommerce.model
 
 class ItemDetailModel(
     var id: String = "",

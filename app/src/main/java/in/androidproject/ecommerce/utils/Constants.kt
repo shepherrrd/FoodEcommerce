@@ -1,9 +1,4 @@
-package `in`.rahulkhatri.vegcartpro.utils
-
-/**
- * Created by Rahul Khatri on 03, January, 2021.
- * github.com/rahulkhatri19
- **/
+package `in`.androidproject.ecommerce.utils
 
 object Constants {
     const val ONE = 1
