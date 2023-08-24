@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1078985818093",
+    "project_id": "kotlin-app-1d688",
+    "storage_bucket": "kotlin-app-1d688.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078985818093:android:e94b881fdb563dcd8df1e4",
+        "android_client_info": {
+          "package_name": "com.trabaye.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078985818093-lid9nkiqjh0s9ojoivodeo11lr1jkvet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1DMm2CFIjj4WUEF795OjEssV-4nvh_Uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078985818093-lid9nkiqjh0s9ojoivodeo11lr1jkvet.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
