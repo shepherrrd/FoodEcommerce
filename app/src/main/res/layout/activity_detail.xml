@@ -38,6 +38,13 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/banner" />
 
+                <ImageButton
+                    android:id="@+id/backbuttondetail"
+                    android:layout_width="54dp"
+                    android:layout_height="96dp"
+                    android:background="#00FFFFFF"
+                    android:src="@drawable/abc_vector_test" />
+
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
@@ -45,6 +52,7 @@
                     app:layout_collapseMode="pin" />
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
+
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.core.widget.NestedScrollView

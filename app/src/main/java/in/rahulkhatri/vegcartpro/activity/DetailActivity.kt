@@ -1,5 +1,6 @@
 package `in`.rahulkhatri.vegcartpro.activity
 
+import android.annotation.SuppressLint
 import `in`.rahulkhatri.vegcartpro.model.BucketModel
 import `in`.rahulkhatri.vegcartpro.utils.Constants
 import `in`.rahulkhatri.vegcartpro.utils.Constants.CART
@@ -8,6 +9,7 @@ import `in`.rahulkhatri.vegcartpro.R
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -100,6 +102,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     // Onclick cart image send to Order Activity
+    @SuppressLint("MissingInflatedId")
     fun orderCart(view: View?) {
 
         val builder = AlertDialog.Builder(this)
@@ -108,10 +111,18 @@ class DetailActivity : AppCompatActivity() {
         val tvQuantity = alertOrderLayout.findViewById<TextView>(R.id.tv_quantity)
         val tvPrice = alertOrderLayout.findViewById<TextView>(R.id.tv_price)
         val btnIncrement = alertOrderLayout.findViewById<Button>(R.id.btn_increment)
+        val backbutton = alertOrderLayout.findViewById<Button>(R.id.backbuttondetail)
         val btnDecrement = alertOrderLayout.findViewById<Button>(R.id.btn_decrement)
         val btnOk = alertOrderLayout.findViewById<Button>(R.id.btn_ok)
         val btnCancel = alertOrderLayout.findViewById<Button>(R.id.btn_cancel)
 //        val etDeliveryAdd = alertOrderLayout.findViewById<EditText>(R.id.et_delivery_add)
+        backbutton.setOnClickListener()
+        {
+            onBackPressed()
+            Log.e("yes" , "yes")
+
+        }
+
         priceOfVeg = price.toDouble()
         tvPrice.text = "$ $price"
         btnIncrement.setOnClickListener {
