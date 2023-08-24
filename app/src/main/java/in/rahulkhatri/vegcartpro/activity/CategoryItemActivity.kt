@@ -80,9 +80,9 @@ class CategoryItemActivity : AppCompatActivity() {
 
             override fun onBindViewHolder(viewHolder: CategoryItemHolder, position: Int, model: ItemDetailModel) {
 
-                Picasso.with(baseContext).load(model.foodImage).placeholder(R.drawable.placeholder).into(viewHolder.ivFood)
-                viewHolder.tvName.setText(model.foodName)
-                viewHolder.tvNameHindi.setText(model.foodNameHindi)
+                Picasso.with(baseContext).load(model.image).placeholder(R.drawable.placeholder).into(viewHolder.ivFood)
+                viewHolder.tvName.setText(model.Name)
+//                viewHolder.tvNameHindi.setText(model.foodNameHindi)
                 val typeface = ResourcesCompat.getFont(this@CategoryItemActivity, R.font.krutihindi)
                 CustomProgressBar.dismissProgressBar()
                 viewHolder.tvNameHindi.typeface = typeface
