@@ -167,9 +167,9 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
     override fun itemClicked(view: View?, position: Int) {
 
         when (position) {
-            0 -> SharedPreferenceUtils(this).setCategoryItem("televisions")
+            0 -> SharedPreferenceUtils(this).setCategoryItem("Television")
             1 -> SharedPreferenceUtils(this).setCategoryItem("bikes")
-            2 -> SharedPreferenceUtils(this).setCategoryItem("utensils")
+            2 -> SharedPreferenceUtils(this).setCategoryItem("kitchen utensils")
             3 -> SharedPreferenceUtils(this).setCategoryItem("laptops")
             4 -> SharedPreferenceUtils(this).setCategoryItem("phones")
             5 -> SharedPreferenceUtils(this).setCategoryItem("shoes")
@@ -198,9 +198,9 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.televisions -> navigationItemActivity("televisions")
+            R.id.televisions -> navigationItemActivity("Television")
             R.id.bikes -> navigationItemActivity("bikes")
-            R.id.utensils -> navigationItemActivity("utensils")
+            R.id.utensils -> navigationItemActivity("kitchen utensils")
             R.id.laptops -> navigationItemActivity("laptops")
             R.id.phones -> navigationItemActivity("phones")
             R.id.shoes -> navigationItemActivity("shoes")
