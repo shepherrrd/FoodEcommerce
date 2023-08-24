@@ -43,10 +43,10 @@ class DetailActivity : AppCompatActivity() {
         image = bundle.getString("image")!!
         foodName = bundle.getString("Name")!!
         foodAdvantage = bundle.getString("advantage")!!
-        vitamins = bundle.getString("vitamins")!!
-        diseaseHeal = bundle.getString("diseaseHeal")!!
-        precautions = bundle.getString("precautions")!!
-        pricefood = bundle.getString("price")!!
+        vitamins = ""
+        diseaseHeal = ""
+        precautions = ""
+        pricefood = ""
         Picasso.with(baseContext).load(image).into(iv_food)
 
         tv_detail_advt.text = foodAdvantage

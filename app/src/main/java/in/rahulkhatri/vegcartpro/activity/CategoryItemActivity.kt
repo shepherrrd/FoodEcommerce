@@ -34,9 +34,6 @@ class CategoryItemActivity : AppCompatActivity() {
     var foodNameHindi = ""
     var imageUrl = ""
     var foodAdvantage = ""
-    var diseaseHeal = ""
-    var vitamins = ""
-    var precautions = ""
     var price = ""
 //    var progressDialog: ProgressDialog? = null
 
@@ -82,9 +79,8 @@ class CategoryItemActivity : AppCompatActivity() {
 
                 Picasso.with(baseContext).load(model.image).placeholder(R.drawable.placeholder).into(viewHolder.ivFood)
                 viewHolder.tvName.setText(model.Name)
-                val typeface = ResourcesCompat.getFont(this@CategoryItemActivity, R.font.krutihindi)
+                viewHolder.tvNameHindi.setText(model.description)
                 CustomProgressBar.dismissProgressBar()
-                viewHolder.tvNameHindi.typeface = typeface
                 val clickItem: ItemDetailModel = model
                 viewHolder.setItemClickListener(object : ItemClickListener {
                     override fun onClick(view: View?, position: Int, isLongClick: Boolean) {
@@ -92,7 +88,7 @@ class CategoryItemActivity : AppCompatActivity() {
                         imageUrl = clickItem.image
                         foodAdvantage = clickItem.description
                         price = clickItem.price
-                        val foodNamePrice = "$foodName\n$foodNameHindi\n$price"
+                        val foodNamePrice = "$foodName\n$price"
                         //  Toast.makeText(FlowerVegActivity.this,mName,Toast.LENGTH_SHORT).show();
 //                        Log.e("Data in flower:", foodNamePrice)
                         val intent = Intent(this@CategoryItemActivity, DetailActivity::class.java)

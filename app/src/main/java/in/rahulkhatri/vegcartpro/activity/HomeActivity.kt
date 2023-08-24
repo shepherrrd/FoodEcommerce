@@ -167,11 +167,12 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
     override fun itemClicked(view: View?, position: Int) {
 
         when (position) {
-            0 -> SharedPreferenceUtils(this).setCategoryItem("shoes")
+            0 -> SharedPreferenceUtils(this).setCategoryItem("Television")
             1 -> SharedPreferenceUtils(this).setCategoryItem("bikes")
-            2 -> SharedPreferenceUtils(this).setCategoryItem("laptops")
-            3 -> SharedPreferenceUtils(this).setCategoryItem("Television")
-            4 -> SharedPreferenceUtils(this).setCategoryItem("salad")
+            2 -> SharedPreferenceUtils(this).setCategoryItem("kitchen utensils")
+            3 -> SharedPreferenceUtils(this).setCategoryItem("laptops")
+            4 -> SharedPreferenceUtils(this).setCategoryItem("phones")
+            5 -> SharedPreferenceUtils(this).setCategoryItem("shoes")
             else -> Log.e("position :", position.toString())
         }
         startActivity(Intent(this@HomeActivity, CategoryItemActivity::class.java).putExtra("ItemPosition ", position))
