@@ -14,24 +14,13 @@
         app:layout_constraintGuide_percent="0.22" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivVegLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/dimen0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/ivBucketLogo"
-        app:layout_constraintTop_toBottomOf="@id/gl22"
-        app:srcCompat="@drawable/veg_logo" />
-
-    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivBucketLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivVegLogo"
+        app:layout_constraintTop_toBottomOf="@id/gl22"
         app:srcCompat="@drawable/bucket_logo" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -45,7 +34,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/ivBucketLogo"
         app:layout_constraintStart_toStartOf="@id/ivBucketLogo"
-        app:layout_constraintTop_toBottomOf="@id/ivVegLogo" />
+        app:layout_constraintTop_toBottomOf="@id/gl22" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivEllipseOne"
@@ -84,6 +73,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/vegetable_logo" />
+        app:srcCompat="@drawable/e_commerce_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

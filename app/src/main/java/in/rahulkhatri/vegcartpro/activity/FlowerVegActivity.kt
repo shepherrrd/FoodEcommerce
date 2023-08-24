@@ -158,7 +158,6 @@ class FlowerVegActivity : AppCompatActivity() {
                 Picasso.with(getBaseContext()).load(model.getImage()).placeholder(R.drawable.placeholder).into(viewHolder.imageView);
                 viewHolder.txtname.setText(model.getName());
                 viewHolder.txtnameHindi.setText(model.getNameHindi());
-                Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/KrutiHindi.TTF");
 
                 viewHolder.txtnameHindi.setTypeface(face2);
                 final AllFood clickItem= model;
@@ -204,7 +203,6 @@ class FlowerVegActivity : AppCompatActivity() {
                 Picasso.with(getBaseContext()).load(model.getImage()).placeholder(R.drawable.placeholder).into(viewHolder.imageView);
                 viewHolder.txtname.setText(model.getName());
                 viewHolder.txtnameHindi.setText(model.getNameHindi());
-                Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/KrutiHindi.TTF");
 
                 viewHolder.txtnameHindi.setTypeface(face2);
                 final AllFood clickItem= model;

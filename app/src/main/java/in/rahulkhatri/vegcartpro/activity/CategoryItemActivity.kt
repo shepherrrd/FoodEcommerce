@@ -83,7 +83,6 @@ class CategoryItemActivity : AppCompatActivity() {
                 Picasso.with(baseContext).load(model.foodImage).placeholder(R.drawable.placeholder).into(viewHolder.ivFood)
                 viewHolder.tvName.setText(model.foodName)
                 viewHolder.tvNameHindi.setText(model.foodNameHindi)
-//                val typeface = Typeface.createFromAsset(assets, "fonts/KrutiHindi")
                 val typeface = ResourcesCompat.getFont(this@CategoryItemActivity, R.font.krutihindi)
                 CustomProgressBar.dismissProgressBar()
                 viewHolder.tvNameHindi.typeface = typeface
