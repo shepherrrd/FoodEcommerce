@@ -1,16 +1,16 @@
 {
     "AllFood": {
-        "flower": {
+        "flowers": {
             "01": {
                 "advantages": "broccoli decreases the risk of obesity, reduce allergic reactions, and overall mortality, it is a powerful antioxidant and anti-ageing vegetable.",
                 "diseaseHeal": "Cancer, Cholesterol, Bone health, heart disease, diabetes, stroke, hypertension and inflammation.",
-                "foodImage": "https://firebasestorage.googleapis.com/v0/b/vegcartpro.appspot.com/o/food%2Fbroccoli.jpg?alt=media&token=d1cb439d-af6f-40c7-ae62-72d7bef2bd64",
+                "foodImages": "https://firebasestorage.googleapis.com/v0/b/vegcartpro.appspot.com/o/food%2Fbroccoli.jpg?alt=media&token=d1cb439d-af6f-40c7-ae62-72d7bef2bd64",
                 "foodName": "Broccoli",
                 "foodNameHindi": "ब्रोकोली",
                 "id": "flower_01",
                 "precaution": "If you are taking blood-thinners, such as Coumadin or warfarin, because broccoli has vitamin K which plays a large role in blood clotting.",
                 "price": "35",
-                "vitamins": "Vitamin B6, C, E, K, Calcium, Magnesium, Potassium, Sodium."
+                "vitamins": "Vitamin B6, C, E, K, Calcireum, Magnesium, Potassium, Sodium."
             },
             "02": {
                 "advantages": "It provides antioxidants and phytonutrients that can protect against cancer. It also contains fibres to enhance weight loss and digestion, choline that is essential for learning and memory, and many other important nutrients.",

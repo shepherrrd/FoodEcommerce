@@ -2,7 +2,7 @@ package `in`.rahulkhatri.vegcartpro.adapter
 
 import `in`.rahulkhatri.vegcartpro.R
 import `in`.rahulkhatri.vegcartpro.activity.DetailActivity
-import `in`.rahulkhatri.vegcartpro.model.FoodDetailModel
+import `in`.rahulkhatri.vegcartpro.model.ItemDetailModel
 import `in`.rahulkhatri.vegcartpro.utils.Constants.ADVANTAGE
 import `in`.rahulkhatri.vegcartpro.utils.Constants.DISEASE_HEAL
 import `in`.rahulkhatri.vegcartpro.utils.Constants.FOOD_NAME
@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso
  * Created by Rahul Khatri on 26, January, 2021.
  * github.com/rahulkhatri19
  **/
-class CategoryItemAdapter (val itemList: List<FoodDetailModel>, val context: Context) : RecyclerView.Adapter<CategoryItemAdapter.MyViewHolder>() {
+class CategoryItemAdapter (val itemList: List<ItemDetailModel>, val context: Context) : RecyclerView.Adapter<CategoryItemAdapter.MyViewHolder>() {
 
     class MyViewHolder(parent: View) : RecyclerView.ViewHolder(parent) {
         var tvName: TextView = parent.findViewById(R.id.tv_name)
@@ -44,21 +44,17 @@ class CategoryItemAdapter (val itemList: List<FoodDetailModel>, val context: Con
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val row = itemList[position]
-        holder.tvName.text = row.foodName
+        holder.tvName.text = row.Name
         val typeface = ResourcesCompat.getFont(context, R.font.krutihindi)
         holder.tvNameHindi.typeface = typeface
-        holder.tvNameHindi.text = row.foodNameHindi
-        Picasso.with(context).load(row.foodImage).placeholder(R.drawable.placeholder).into(holder.ivFood)
+        Picasso.with(context).load(row.image).placeholder(R.drawable.placeholder).into(holder.ivFood)
         holder.main.setOnClickListener {
             Log.e("Position adapter:", position.toString())
             val intent = Intent(context, DetailActivity::class.java)
             val bundle = Bundle()
-            bundle.putString(FOOD_NAME, row.foodName)
-            bundle.putString(IMAGE_URL, row.foodImage)
-            bundle.putString(ADVANTAGE, row.advantages)
-            bundle.putString(VITAMINS, row.vitamins)
-            bundle.putString(DISEASE_HEAL, row.diseaseHeal)
-            bundle.putString(PRECAUTIONS, row.precaution)
+            bundle.putString(FOOD_NAME, row.Name)
+            bundle.putString(IMAGE_URL, row.image)
+            bundle.putString(ADVANTAGE, row.description)
             bundle.putString(PRICE, row.price)
             intent.putExtras(bundle)
             context.startActivity(intent)
