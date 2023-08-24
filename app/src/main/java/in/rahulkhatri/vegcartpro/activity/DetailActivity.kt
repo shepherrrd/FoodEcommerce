@@ -64,7 +64,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         btnDecrement.setOnClickListener {
-            if (numberOfVeg == Constants.POINT_FIVE) {
+            if (numberOfVeg == Constants.ONE.toDouble()) {
                 llCart.visibility = View.GONE
                 tv_cart.visibility = View.VISIBLE
                 tv_price.text = getString(R.string.pricePerkg, price)

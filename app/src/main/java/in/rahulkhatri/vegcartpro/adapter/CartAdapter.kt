@@ -51,10 +51,10 @@ class CartAdapter(private val cartList: MutableList<BucketModel>, val context: C
         holder.btnDecrement.setOnClickListener {
 
             if (numberOfVeg >= ONE) {
-                numberOfVeg -= POINT_FIVE
+                numberOfVeg -= ONE
             }
 
-            if (numberOfVeg == POINT_FIVE) {
+            if (numberOfVeg == ONE.toDouble()) {
                 holder.btnDecrement.visibility = View.GONE
             }
             holder.tvProductQuantity.text = numberOfVeg.toString()
@@ -64,7 +64,7 @@ class CartAdapter(private val cartList: MutableList<BucketModel>, val context: C
         }
 
         holder.btnIncrement.setOnClickListener {
-            numberOfVeg += POINT_FIVE
+            numberOfVeg += ONE
             holder.btnDecrement.visibility = View.VISIBLE
             holder.tvProductQuantity.text = numberOfVeg.toString()
             holder.tvQuantity.text = numberOfVeg.toString()
