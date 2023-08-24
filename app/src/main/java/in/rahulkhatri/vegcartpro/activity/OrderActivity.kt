@@ -34,7 +34,7 @@ class OrderActivity : AppCompatActivity() {
         foodprice = bundle?.getString("pricefood")!!
         foodname = bundle.getString("namefood")!!
         priceOfVeg = foodprice.toDouble()
-        tvPrice.text = "₹ $foodprice"
+        tvPrice.text = "$ $foodprice"
     }
 
     fun submitOrder(v: View?) { // String mPrice="You order "+numberOfVeg+" kg of Vegetable \n Thank you !";

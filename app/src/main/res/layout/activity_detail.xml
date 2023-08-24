@@ -212,7 +212,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="₹ 5 per KG"
+            android:text="$ 5 per KG"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@color/light_green"
             android:textSize="18sp"

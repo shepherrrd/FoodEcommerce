@@ -112,7 +112,7 @@ class DetailActivity : AppCompatActivity() {
         val btnCancel = alertOrderLayout.findViewById<Button>(R.id.btn_cancel)
 //        val etDeliveryAdd = alertOrderLayout.findViewById<EditText>(R.id.et_delivery_add)
         priceOfVeg = price.toDouble()
-        tvPrice.text = "₹ $price"
+        tvPrice.text = "$ $price"
         btnIncrement.setOnClickListener {
             numberOfVeg = numberOfVeg + 0.5
             // Increment of 500gm will done onclick + button
@@ -120,7 +120,7 @@ class DetailActivity : AppCompatActivity() {
             tvQuantity.text = numberOfVeg.toString()
             //  displayPrice(numberOfVeg*priceOfVeg);
             val price = numberOfVeg * priceOfVeg
-            tvPrice.text = "₹ $price" //  NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
+            tvPrice.text = "$ $price" //  NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
         }
         btnDecrement.setOnClickListener {
             if (numberOfVeg >= 1) {
@@ -131,7 +131,7 @@ class DetailActivity : AppCompatActivity() {
             tvQuantity.text = numberOfVeg.toString()
             // displayPrice(numberOfVeg*priceOfVeg);
             val price = numberOfVeg * priceOfVeg
-            tvPrice.text = "₹ $price"
+            tvPrice.text = "$ $price"
 //            tvPrice.text = NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
         }
         btnOk.setOnClickListener {
