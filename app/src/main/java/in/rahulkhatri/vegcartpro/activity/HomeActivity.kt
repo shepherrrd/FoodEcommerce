@@ -167,9 +167,9 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
     override fun itemClicked(view: View?, position: Int) {
 
         when (position) {
-            0 -> SharedPreferenceUtils(this).setCategoryItem("Television")
+            0 -> SharedPreferenceUtils(this).setCategoryItem("televisions")
             1 -> SharedPreferenceUtils(this).setCategoryItem("bikes")
-            2 -> SharedPreferenceUtils(this).setCategoryItem("kitchen utensils")
+            2 -> SharedPreferenceUtils(this).setCategoryItem("utensils")
             3 -> SharedPreferenceUtils(this).setCategoryItem("laptops")
             4 -> SharedPreferenceUtils(this).setCategoryItem("phones")
             5 -> SharedPreferenceUtils(this).setCategoryItem("shoes")
@@ -198,12 +198,12 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.fruit -> navigationItemActivity("fruit")
-            R.id.salid -> navigationItemActivity("salad")
-            R.id.flower -> navigationItemActivity("flower")
-            R.id.leaves -> navigationItemActivity("leaves")
-            R.id.root -> navigationItemActivity("root")
-            R.id.nav_send -> startActivity(Intent(this@HomeActivity, ContactActivity::class.java))
+            R.id.televisions -> navigationItemActivity("televisions")
+            R.id.bikes -> navigationItemActivity("bikes")
+            R.id.utensils -> navigationItemActivity("utensils")
+            R.id.laptops -> navigationItemActivity("laptops")
+            R.id.phones -> navigationItemActivity("phones")
+            R.id.shoes -> navigationItemActivity("shoes")
             R.id.mycart -> startActivity(Intent(this@HomeActivity, MyCartActivity::class.java))
         }
         val drawerLayout = findViewById<androidx.drawerlayout.widget.DrawerLayout>(R.id.drawer_layout)
