@@ -24,7 +24,7 @@
             android:layout_weight="0.4"
             android:contentDescription="@string/food_item_image"
             android:scaleType="centerCrop"
-            android:src="@drawable/cauliflower" />
+            android:src="@drawable/banner" />
 
         <RelativeLayout
             android:layout_width="0dp"

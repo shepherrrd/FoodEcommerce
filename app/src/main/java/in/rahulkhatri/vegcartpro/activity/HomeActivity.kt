@@ -129,10 +129,9 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
 
     fun AddImageUrlLocal() {
         HashMapForLocal = HashMap()
-        HashMapForLocal["Fruits"] = R.drawable.fruit
-        HashMapForLocal["Cauliflower"] = R.drawable.cauliflower
-        HashMapForLocal["Fruit and Vegi"] = R.drawable.giphy
-        HashMapForLocal["Dancing Vegi"] = R.drawable.vegjig
+        HashMapForLocal["Laptops"] = R.drawable.laptops
+        HashMapForLocal["Kitchen Items"] = R.drawable.utensils
+        HashMapForLocal["Come shop with us"] = R.drawable.banner
     }
 
     override fun onStop() {
@@ -156,13 +155,13 @@ class HomeActivity : AppCompatActivity(), OnSliderClickListener, ViewPagerEx.OnP
 
     // Bottom
     private fun prepareItem() {
-//        var item = Item(R.drawable.shutterstock, "Flower", "Price is 30")
-//        itemList.add(item)
-        itemList.add(ItemModel(R.drawable.shutterstock, "Flower", "Price is 30"))
-        itemList.add(ItemModel(R.drawable.apple, "Fruit", "Price is 150"))
-        itemList.add(ItemModel(R.drawable.lettuce2, "Leaves", "Price is 70"))
-        itemList.add(ItemModel(R.drawable.carrot, "Root", "Price is 30"))
-        itemList.add(ItemModel(R.drawable.tomato, "Salad", "Price is 20"))
+        itemList.add(ItemModel(R.drawable.television, "Television", ""))
+        itemList.add(ItemModel(R.drawable.bikes, "Bikes", ""))
+        itemList.add(ItemModel(R.drawable.utensils, "Utensils", ""))
+        itemList.add(ItemModel(R.drawable.laptops, "Laptops", ""))
+        itemList.add(ItemModel(R.drawable.phones, "Phones", ""))
+        itemList.add(ItemModel(R.drawable.shoes, "Shoes", ""))
+
     }
 
     override fun itemClicked(view: View?, position: Int) {

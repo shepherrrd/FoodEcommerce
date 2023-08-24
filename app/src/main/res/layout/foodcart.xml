@@ -34,7 +34,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:contentDescription="@string/ordered_food_image"
-            android:src="@drawable/apple"
+            android:src="@drawable/bikes"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="@id/gl_30"
             card_view:layout_constraintStart_toStartOf="parent"
