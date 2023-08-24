@@ -38,18 +38,20 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/banner" />
 
-                <ImageButton
-                    android:id="@+id/backbuttondetail"
-                    android:layout_width="54dp"
-                    android:layout_height="96dp"
-                    android:background="#00FFFFFF"
-                    android:src="@drawable/abc_vector_test" />
-
                 <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin" />
+
+                <ImageButton
+                    android:id="@+id/backbuttondetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#57000000"
+                    android:src="@drawable/abc_vector_test"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:src="@drawable/abc_vector_test" />
 
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
