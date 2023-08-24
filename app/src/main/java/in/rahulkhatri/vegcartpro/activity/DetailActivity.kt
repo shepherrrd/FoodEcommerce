@@ -40,8 +40,8 @@ class DetailActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener { finish() }
         val bundle = intent.extras
         id = bundle?.getString("id")!!
-        image = bundle.getString("imageurl")!!
-        foodName = bundle.getString("foodName")!!
+        image = bundle.getString("image")!!
+        foodName = bundle.getString("Name")!!
         foodAdvantage = bundle.getString("advantage")!!
         vitamins = bundle.getString("vitamins")!!
         diseaseHeal = bundle.getString("diseaseHeal")!!

@@ -13,24 +13,7 @@ class ContactActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
 
-        tv_facebook.setOnClickListener {
-        }
-        tv_github.setOnClickListener {
-            val web = Uri.parse("https://github.com/rahulkhatri19")
-            openBrowser(web)
-        }
-        tv_linkedin.setOnClickListener {
-            val web = Uri.parse("https://linkedin.com/in/rahulkhatri19")
-            openBrowser(web)
-        }
-        tv_twitter.setOnClickListener {
-            val web = Uri.parse("https://twitter.com/rahulkhatri019")
-            openBrowser(web)
-        }
-        tv_gmail.setOnClickListener {
-            val web = Uri.parse("mailto:rkhatri.dev@gmail.com")
-            openBrowser(web)
-        }
+
     }
 
     private fun openBrowser(web: Uri?) {

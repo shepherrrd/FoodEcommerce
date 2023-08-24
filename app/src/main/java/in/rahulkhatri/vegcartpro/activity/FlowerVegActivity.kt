@@ -1,7 +1,7 @@
 package `in`.rahulkhatri.vegcartpro.activity
 
 import `in`.rahulkhatri.vegcartpro.interfaces.ItemClickListener
-import `in`.rahulkhatri.vegcartpro.model.AllFoodModel
+import `in`.rahulkhatri.vegcartpro.model.AllItemModel
 import `in`.rahulkhatri.vegcartpro.utils.SharedPreferenceUtils
 import `in`.rahulkhatri.vegcartpro.R
 import android.app.ProgressDialog
@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso
 class FlowerVegActivity : AppCompatActivity() {
     var recyclerView: RecyclerView? = null
     var database: FirebaseDatabase? = null
-    var allFoodData: DatabaseReference? = null
+    var allItemData: DatabaseReference? = null
     var rlNoData: RelativeLayout? = null
     var name = ""
     var nameHindi = ""
@@ -62,7 +62,7 @@ class FlowerVegActivity : AppCompatActivity() {
             recyclerView?.visibility = View.VISIBLE
             database = FirebaseDatabase.getInstance()
             // allFoodData= database.getReference("AllFood/flower");
-            allFoodData = database!!.getReference("AllFood/" + SharedPreferenceUtils(this).getFlowerVeg())
+            allItemData = database!!.getReference("AllItems/" + SharedPreferenceUtils(this).getFlowerVeg())
             progressDialog!!.show()
         } else {
             rlNoData?.visibility = View.VISIBLE
@@ -74,9 +74,9 @@ class FlowerVegActivity : AppCompatActivity() {
     }
 
     fun loadData() {
-        val options: FirebaseRecyclerOptions<AllFoodModel> = FirebaseRecyclerOptions.Builder<AllFoodModel>().setQuery(allFoodData!!, AllFoodModel::class.java).setLifecycleOwner(this).build()
-        val adapter: FirebaseRecyclerAdapter<AllFoodModel, UserHolder> = object : FirebaseRecyclerAdapter<AllFoodModel, UserHolder>(options) {
-            protected override fun onBindViewHolder(viewHolder: UserHolder, position: Int, model: AllFoodModel) {
+        val options: FirebaseRecyclerOptions<AllItemModel> = FirebaseRecyclerOptions.Builder<AllItemModel>().setQuery(allItemData!!, AllItemModel::class.java).setLifecycleOwner(this).build()
+        val adapter: FirebaseRecyclerAdapter<AllItemModel, UserHolder> = object : FirebaseRecyclerAdapter<AllItemModel, UserHolder>(options) {
+            protected override fun onBindViewHolder(viewHolder: UserHolder, position: Int, model: AllItemModel) {
                 Picasso.with(baseContext).load(model.Image).placeholder(R.drawable.placeholder).into(viewHolder.imageView)
                 viewHolder.txtName.setText(model.Name)
                 viewHolder.txtNameHindi.setText(model.NameHindi)
@@ -84,7 +84,7 @@ class FlowerVegActivity : AppCompatActivity() {
                 // Log.e("prog", "3");
                 progressDialog!!.dismiss()
                 viewHolder.txtNameHindi.typeface = face2
-                val clickItem: AllFoodModel = model
+                val clickItem: AllItemModel = model
                 viewHolder.setItemClickListener(object : ItemClickListener{
                     override fun onClick(view: View?, position: Int, isLongClick: Boolean) {
                         name = clickItem.Name
