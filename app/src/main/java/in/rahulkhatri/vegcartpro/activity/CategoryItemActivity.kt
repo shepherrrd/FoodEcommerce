@@ -62,7 +62,7 @@ class CategoryItemActivity : AppCompatActivity() {
             recyclerView?.visibility = View.VISIBLE
             database = FirebaseDatabase.getInstance()
             // allFoodData= database.getReference("AllFood/flower");
-            allFoodData = database!!.getReference("AllFood/" + SharedPreferenceUtils(this).getCategoryItem())
+            allFoodData = database!!.getReference("AllItems/" + SharedPreferenceUtils(this).getCategoryItem())
 //            progressDialog?.show()
             CustomProgressBar.showProgressbar()
         } else {
@@ -80,9 +80,8 @@ class CategoryItemActivity : AppCompatActivity() {
 
             override fun onBindViewHolder(viewHolder: CategoryItemHolder, position: Int, model: ItemDetailModel) {
 
-                Picasso.with(baseContext).load(model.foodImage).placeholder(R.drawable.placeholder).into(viewHolder.ivFood)
-                viewHolder.tvName.setText(model.foodName)
-                viewHolder.tvNameHindi.setText(model.foodNameHindi)
+                Picasso.with(baseContext).load(model.image).placeholder(R.drawable.placeholder).into(viewHolder.ivFood)
+                viewHolder.tvName.setText(model.Name)
                 val typeface = ResourcesCompat.getFont(this@CategoryItemActivity, R.font.krutihindi)
                 CustomProgressBar.dismissProgressBar()
                 viewHolder.tvNameHindi.typeface = typeface
