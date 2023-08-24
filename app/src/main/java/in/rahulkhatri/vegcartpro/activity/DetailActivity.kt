@@ -97,7 +97,7 @@ class DetailActivity : AppCompatActivity() {
     private fun addToBucket() {
         val reference = FirebaseDatabase.getInstance().getReference(Constants.BUCKET)
         val price = numberOfVeg * price.toDouble()
-        val bucket = BucketModel(id, image, Name, price.toDouble(), numberOfVeg, price)
+        val bucket = BucketModel(id, image, , price.toDouble(), numberOfVeg, price)
         reference.child(Utility.getDeviceId(this)).child(id).setValue(bucket)
     }
 
@@ -124,7 +124,7 @@ class DetailActivity : AppCompatActivity() {
         }
 
         priceOfVeg = price.toDouble()
-        tvPrice.text = "$ $price"
+        tvPrice.text = "₹ $price"
         btnIncrement.setOnClickListener {
             numberOfVeg = numberOfVeg + 0.5
             // Increment of 500gm will done onclick + button
@@ -132,7 +132,7 @@ class DetailActivity : AppCompatActivity() {
             tvQuantity.text = numberOfVeg.toString()
             //  displayPrice(numberOfVeg*priceOfVeg);
             val price = numberOfVeg * priceOfVeg
-            tvPrice.text = "$ $price" //  NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
+            tvPrice.text = "₹ $price" //  NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
         }
         btnDecrement.setOnClickListener {
             if (numberOfVeg >= 1) {
@@ -143,7 +143,7 @@ class DetailActivity : AppCompatActivity() {
             tvQuantity.text = numberOfVeg.toString()
             // displayPrice(numberOfVeg*priceOfVeg);
             val price = numberOfVeg * priceOfVeg
-            tvPrice.text = "$ $price"
+            tvPrice.text = "₹ $price"
 //            tvPrice.text = NumberFormat.getCurrencyInstance().format(numberOfVeg * priceOfVeg)
         }
         btnOk.setOnClickListener {
@@ -155,7 +155,7 @@ class DetailActivity : AppCompatActivity() {
                 val database = FirebaseDatabase.getInstance()
                 val ref = database.getReference(CART)
                 val newPostRef = ref.push()
-//                newPostRef.setValue(CartModel(Name, tvPrice.text.toString(), tvQuantity.text.toString(), CART, image))
+//                newPostRef.setValue(CartModel(, tvPrice.text.toString(), tvQuantity.text.toString(), CART, image))
 //                Toast.makeText(baseContext, "Order Added to Cart Successfully \n Thank you", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, CartActivity::class.java))
         }
@@ -169,10 +169,10 @@ class DetailActivity : AppCompatActivity() {
         super.onResume()
         val ab = supportActionBar
         if (ab != null) {
-            if(Name == ""){
-                ab.title = "Product Description"
+            if( == ""){
+                ab.title = "Food Description"
             } else {
-                ab.title = Name
+                ab.title = 
             }
 
             ab.setDisplayHomeAsUpEnabled(true)
