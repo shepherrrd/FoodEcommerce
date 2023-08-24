@@ -23,12 +23,9 @@ class DetailActivity : AppCompatActivity() {
      *  Use: detail of a particular product, Nutrition fact */
     var image = ""
     var id = ""
-    var foodName = ""
-    var foodAdvantage = ""
-    var diseaseHeal = ""
-    var vitamins = ""
-    var precautions = ""
-    var pricefood = ""
+    var Name = ""
+    var price = ""
+    var description = ""
     var numberOfVeg = 1.0
     var priceOfVeg = 0.0
 
@@ -41,19 +38,16 @@ class DetailActivity : AppCompatActivity() {
         val bundle = intent.extras
         id = bundle?.getString("id")!!
         image = bundle.getString("image")!!
-        foodName = bundle.getString("Name")!!
-        foodAdvantage = bundle.getString("advantage")!!
-        vitamins = ""
-        diseaseHeal = ""
-        precautions = ""
-        pricefood = ""
+        Name = bundle.getString("Name")!!
+        price = bundle.getString("price")!!
+        description = bundle.getString("description")!!
         Picasso.with(baseContext).load(image).into(iv_food)
 
-        tv_detail_advt.text = foodAdvantage
-        tv_detail_vitamin.text = vitamins
-        tv_detail_disease.text = diseaseHeal
-        tv_detail_precaution.text = precautions
-        tv_price.text = getString(R.string.pricePerkg, pricefood)
+        tv_detail_advt.text = description
+//        tv_detail_vitamin.text = vitamins
+//        tv_detail_disease.text = diseaseHeal
+//        tv_detail_precaution.text = precautions
+        tv_price.text = getString(R.string.pricePerkg, price)
 
         tv_cart.setOnClickListener {
             llCart.visibility = View.VISIBLE
@@ -67,13 +61,13 @@ class DetailActivity : AppCompatActivity() {
             if (numberOfVeg == Constants.POINT_FIVE) {
                 llCart.visibility = View.GONE
                 tv_cart.visibility = View.VISIBLE
-                tv_price.text = getString(R.string.pricePerkg, pricefood)
+                tv_price.text = getString(R.string.pricePerkg, price)
                 removeBucket()
             }
 
             if (numberOfVeg >= Constants.ONE) {
                 numberOfVeg -= Constants.POINT_FIVE
-                val amountPrice = numberOfVeg * pricefood.toDouble()
+                val amountPrice = numberOfVeg * price.toDouble()
                 tv_price.text = getString(R.string.amount, amountPrice.toString())
                 addToBucket()
             }
@@ -83,7 +77,7 @@ class DetailActivity : AppCompatActivity() {
 
         btnIncrement.setOnClickListener {
             numberOfVeg += Constants.POINT_FIVE
-            val amountPrice = numberOfVeg * pricefood.toDouble()
+            val amountPrice = numberOfVeg * price.toDouble()
             tvQuantity.text = numberOfVeg.toString()
             tv_price.text = getString(R.string.amount, amountPrice.toString())
             addToBucket()
@@ -99,8 +93,8 @@ class DetailActivity : AppCompatActivity() {
     //  add product to Bucket
     private fun addToBucket() {
         val reference = FirebaseDatabase.getInstance().getReference(Constants.BUCKET)
-        val price = numberOfVeg * pricefood.toDouble()
-        val bucket = BucketModel(id, image, foodName, pricefood.toDouble(), numberOfVeg, price)
+        val price = numberOfVeg * price.toDouble()
+        val bucket = BucketModel(id, image, Name, price.toDouble(), numberOfVeg, price)
         reference.child(Utility.getDeviceId(this)).child(id).setValue(bucket)
     }
 
@@ -117,8 +111,8 @@ class DetailActivity : AppCompatActivity() {
         val btnOk = alertOrderLayout.findViewById<Button>(R.id.btn_ok)
         val btnCancel = alertOrderLayout.findViewById<Button>(R.id.btn_cancel)
 //        val etDeliveryAdd = alertOrderLayout.findViewById<EditText>(R.id.et_delivery_add)
-        priceOfVeg = pricefood.toDouble()
-        tvPrice.text = "₹ $pricefood"
+        priceOfVeg = price.toDouble()
+        tvPrice.text = "₹ $price"
         btnIncrement.setOnClickListener {
             numberOfVeg = numberOfVeg + 0.5
             // Increment of 500gm will done onclick + button
@@ -149,7 +143,7 @@ class DetailActivity : AppCompatActivity() {
                 val database = FirebaseDatabase.getInstance()
                 val ref = database.getReference(CART)
                 val newPostRef = ref.push()
-//                newPostRef.setValue(CartModel(foodName, tvPrice.text.toString(), tvQuantity.text.toString(), CART, image))
+//                newPostRef.setValue(CartModel(Name, tvPrice.text.toString(), tvQuantity.text.toString(), CART, image))
 //                Toast.makeText(baseContext, "Order Added to Cart Successfully \n Thank you", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, CartActivity::class.java))
         }
@@ -163,10 +157,10 @@ class DetailActivity : AppCompatActivity() {
         super.onResume()
         val ab = supportActionBar
         if (ab != null) {
-            if(foodName == ""){
-                ab.title = "Food Description"
+            if(Name == ""){
+                ab.title = "Product Description"
             } else {
-                ab.title = foodName
+                ab.title = Name
             }
 
             ab.setDisplayHomeAsUpEnabled(true)

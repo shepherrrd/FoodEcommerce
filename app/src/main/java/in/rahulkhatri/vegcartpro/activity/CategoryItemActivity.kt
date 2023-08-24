@@ -30,10 +30,10 @@ class CategoryItemActivity : AppCompatActivity() {
     var database: FirebaseDatabase? = null
     var allFoodData: DatabaseReference? = null
     var rlNoData: RelativeLayout? = null
-    var foodName = ""
+    var Name = ""
     var foodNameHindi = ""
-    var imageUrl = ""
-    var foodAdvantage = ""
+    var image = ""
+    var description = ""
     var price = ""
 //    var progressDialog: ProgressDialog? = null
 
@@ -84,19 +84,19 @@ class CategoryItemActivity : AppCompatActivity() {
                 val clickItem: ItemDetailModel = model
                 viewHolder.setItemClickListener(object : ItemClickListener {
                     override fun onClick(view: View?, position: Int, isLongClick: Boolean) {
-                        foodName = clickItem.Name
-                        imageUrl = clickItem.image
-                        foodAdvantage = clickItem.description
+                        Name = clickItem.Name
+                        image = clickItem.image
+                        description = clickItem.description
                         price = clickItem.price
-                        val foodNamePrice = "$foodName\n$price"
+                        val foodNamePrice = "$Name\n$price"
                         //  Toast.makeText(FlowerVegActivity.this,mName,Toast.LENGTH_SHORT).show();
 //                        Log.e("Data in flower:", foodNamePrice)
                         val intent = Intent(this@CategoryItemActivity, DetailActivity::class.java)
                         val bundle = Bundle()
                         bundle.putString("id", clickItem.id)
-                        bundle.putString("foodName", foodName)
-                        bundle.putString("imageurl", imageUrl)
-                        bundle.putString("advantage", foodAdvantage)
+                        bundle.putString("Name", Name)
+                        bundle.putString("image", image)
+                        bundle.putString("description", description)
                         bundle.putString("price", price)
 
                         intent.putExtras(bundle)
